@@ -11,15 +11,19 @@ import java.util.regex.Pattern;
 public final class Sentence {
     private static final Pattern PATTERN = Pattern.compile("\".+\"");
 
+    @NotNull
     private final String rawText;
+    @NotNull
     private final ValueGraph<Word, Relation> dependencyTree;
+    @NotNull
     private final List<Word> roots;
     // Note: words and punctuations (aka tokens)
+    @NotNull
     private final List<Word> wordList;
     // Position in text
     private final int position;
 
-    public Sentence(String rawText, ValueGraph<Word, Relation> dependencyTree, List<Word> roots, List<Word> wordList, int position) {
+    public Sentence(@NotNull String rawText, @NotNull ValueGraph<Word, Relation> dependencyTree, @NotNull List<Word> roots, @NotNull List<Word> wordList, int position) {
         this.rawText = rawText;
         this.dependencyTree = dependencyTree;
         this.roots = roots;
@@ -27,6 +31,7 @@ public final class Sentence {
         this.position = position;
     }
 
+    @NotNull
     public Set<Word> children(@NotNull Word node) {
         return dependencyTree.successors(node);
     }
@@ -51,6 +56,7 @@ public final class Sentence {
         return PATTERN.matcher(rawText).find();
     }
 
+    @NotNull
     public List<String> getDirectSpeeches() {
         if (!hasDirectSpeech()) {
             return Collections.emptyList();
@@ -64,14 +70,17 @@ public final class Sentence {
         return Collections.unmodifiableList(speeches);
     }
 
+    @NotNull
     public String getRawText() {
         return rawText;
     }
 
+    @NotNull
     public List<Word> getRoots() {
         return roots;
     }
 
+    @NotNull
     public List<Word> getWordList() {
         return wordList;
     }

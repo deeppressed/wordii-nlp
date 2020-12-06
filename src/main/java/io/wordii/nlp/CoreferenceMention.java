@@ -1,26 +1,34 @@
 package io.wordii.nlp;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
 public final class CoreferenceMention {
+    @NotNull
     private final String rawMention;
+    @NotNull
     private final Word headWord;
+    @NotNull
     private final WordPosition headWordPosition;
 
-    public CoreferenceMention(String rawMention, Word headWord, WordPosition headWordPosition) {
+    public CoreferenceMention(@NotNull String rawMention, @NotNull Word headWord, @NotNull WordPosition headWordPosition) {
         this.rawMention = rawMention;
         this.headWord = headWord;
         this.headWordPosition = headWordPosition;
     }
 
+    @NotNull
     public String getRawMention() {
         return rawMention;
     }
 
+    @NotNull
     public Word getHeadWord() {
         return headWord;
     }
 
+    @NotNull
     public WordPosition getHeadWordPosition() {
         return headWordPosition;
     }

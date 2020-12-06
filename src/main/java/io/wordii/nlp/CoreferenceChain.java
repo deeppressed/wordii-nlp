@@ -1,21 +1,27 @@
 package io.wordii.nlp;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 import java.util.Objects;
 
 public final class CoreferenceChain {
+    @NotNull
     private final CoreferenceMention mainMention;
+    @NotNull
     private final List<CoreferenceMention> mentions;
 
-    public CoreferenceChain(CoreferenceMention mainMention, List<CoreferenceMention> mentions) {
+    public CoreferenceChain(@NotNull CoreferenceMention mainMention, @NotNull List<CoreferenceMention> mentions) {
         this.mainMention = mainMention;
         this.mentions = mentions;
     }
 
+    @NotNull
     public CoreferenceMention getMainMention() {
         return mainMention;
     }
 
+    @NotNull
     public List<CoreferenceMention> getMentions() {
         return mentions;
     }

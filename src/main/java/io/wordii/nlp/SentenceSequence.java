@@ -9,18 +9,22 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public final class SentenceSequence {
+    @NotNull
     private final List<Sentence> sentenceList;
+    @NotNull
     private final Set<CoreferenceChain> coreferenceChains;
 
-    public SentenceSequence(List<Sentence> sentenceList, Set<CoreferenceChain> coreferenceChains) {
+    public SentenceSequence(@NotNull List<Sentence> sentenceList, @NotNull Set<CoreferenceChain> coreferenceChains) {
         this.sentenceList = sentenceList;
         this.coreferenceChains = coreferenceChains;
     }
 
+    @NotNull
     public List<Sentence> getSentenceList() {
         return sentenceList;
     }
 
+    @NotNull
     public Set<CoreferenceChain> findCorefChains(@NotNull WordPosition position) {
         return coreferenceChains.stream()
                 .filter(chain -> chain.getMentions().stream()

@@ -1,29 +1,37 @@
 package io.wordii.nlp;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
 public final class Word {
+    @NotNull
     private final String rawWord;
+    @NotNull
     private final String lemma;
+    @NotNull
     private final String partOfSpeech;
     // Position in sentence
     private final int position;
 
-    public Word(String rawWord, String lemma, String partOfSpeech, int position) {
+    public Word(@NotNull String rawWord, @NotNull String lemma, @NotNull String partOfSpeech, int position) {
         this.rawWord = rawWord;
         this.lemma = lemma;
         this.partOfSpeech = partOfSpeech;
         this.position = position;
     }
 
+    @NotNull
     public String getRawWord() {
         return rawWord;
     }
 
+    @NotNull
     public String getLemma() {
         return lemma;
     }
 
+    @NotNull
     public String getPartOfSpeech() {
         return partOfSpeech;
     }

@@ -1,5 +1,7 @@
 package io.wordii.nlp;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * UD v1 - https://universaldependencies.org/docsv1/u/dep/index.html.
  */
@@ -52,6 +54,7 @@ public enum Relation {
         this.udName = udName;
     }
 
+    @NotNull
     public String getUdName() {
         return udName;
     }
