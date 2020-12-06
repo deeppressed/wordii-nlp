@@ -1,15 +1,15 @@
-package io.wordii.nlp
+package io.wordii.nlp.api
 
 import com.google.common.graph.ValueGraph
 import kotlinx.collections.immutable.toImmutableList
 import java.util.regex.Pattern
 
 data class Sentence(
-    val rawText: String,
-    private val dependencyTree: ValueGraph<Word, Relation>,
-    val roots: List<Word>, // Note: words and punctuations (aka tokens)
-    val wordList: List<Word>, // Position in text
-    val position: Int
+        val rawText: String,
+        private val dependencyTree: ValueGraph<Word, Relation>,
+        val roots: List<Word>, // Note: words and punctuations (aka tokens)
+        val wordList: List<Word>, // Position in text
+        val position: Int
 ) {
     fun children(node: Word): Set<Word> {
         return dependencyTree.successors(node)

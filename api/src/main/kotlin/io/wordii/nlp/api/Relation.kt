@@ -1,4 +1,4 @@
-package io.wordii.nlp
+package io.wordii.nlp.api
 
 /**
  * UD v1 - https://universaldependencies.org/docsv1/u/dep/index.html.

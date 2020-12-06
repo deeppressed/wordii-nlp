@@ -1,4 +1,4 @@
-package io.wordii.nlp
+package io.wordii.nlp.client
 
 import com.google.common.graph.ImmutableValueGraph
 import com.google.common.graph.MutableValueGraph
@@ -10,6 +10,7 @@ import edu.stanford.nlp.ling.IndexedWord
 import edu.stanford.nlp.pipeline.CoreDocument
 import edu.stanford.nlp.pipeline.StanfordCoreNLP
 import edu.stanford.nlp.semgraph.SemanticGraph
+import io.wordii.nlp.api.*
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableSet
 import java.util.*

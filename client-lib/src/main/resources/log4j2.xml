@@ -6,10 +6,10 @@
         </Console>
     </Appenders>
     <Loggers>
-        <AsyncLogger name="io.wordii.nlp" level="info" additivity="false">
+        <!-- More information about async can be found here - https://logging.apache.org/log4j/2.x/manual/async.html -->
+        <AsyncLogger name="io.wordii.nlp.client" level="info" additivity="false">
             <AppenderRef ref="Console"/>
         </AsyncLogger>
-        <!-- More information about async here - https://logging.apache.org/log4j/2.x/manual/async.html -->
         <AsyncLogger name="edu.stanford.nlp" level="info" additivity="false">
             <AppenderRef ref="Console"/>
         </AsyncLogger>
