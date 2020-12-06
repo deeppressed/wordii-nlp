@@ -1,7 +1,9 @@
 package io.wordii.nlp.api
 
 import kotlinx.collections.immutable.toImmutableSet
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class SentenceSequence(
         val sentenceList: List<Sentence>,
         private val coreferenceChains: Set<CoreferenceChain>

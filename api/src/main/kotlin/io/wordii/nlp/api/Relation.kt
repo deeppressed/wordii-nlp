@@ -1,8 +1,11 @@
 package io.wordii.nlp.api
 
+import kotlinx.serialization.Serializable
+
 /**
  * UD v1 - https://universaldependencies.org/docsv1/u/dep/index.html.
  */
+@Serializable
 enum class Relation(val udName: String) {
     ACL("acl"), ADVCL("advcl"), ADVMOD("advmod"), AMOD("amod"), APPOS("appos"), AUX("aux"), AUXPASS("auxpass"), CASE("case"), CC(
         "cc"

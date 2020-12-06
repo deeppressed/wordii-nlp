@@ -15,7 +15,7 @@ import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableSet
 import java.util.*
 
-object NlpParser {
+object ClientNlpParser : NlpParser {
     private val pipeline: StanfordCoreNLP by lazy {
         val props = Properties()
         props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,parse,coref")
@@ -23,7 +23,7 @@ object NlpParser {
         StanfordCoreNLP(props)
     }
 
-    fun parse(text: String?): SentenceSequence {
+    override fun depParse(text: String?): SentenceSequence {
         if (text == null) {
             return SentenceSequence(emptyList(), emptySet())
         }

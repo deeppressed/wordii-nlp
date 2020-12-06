@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.20'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.10'
 }
 
 group 'io.wordii.nlp'
@@ -12,6 +13,4 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
