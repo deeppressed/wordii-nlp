@@ -1,0 +1,34 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'io.wordii.nlp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation project(":api")
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    // NLP
+    implementation "edu.stanford.nlp:stanford-corenlp:3.9.2"
+    implementation "edu.stanford.nlp:stanford-corenlp:3.9.2:models"
+
+    // Logging
+    // The same version as in "Stanford NLP" dependency
+    implementation "org.slf4j:slf4j-api:1.7.12"
+    // For "slf4j-api:1.8+" use "log4j-slf4j18-impl"
+    // (see https://logging.apache.org/log4j/2.0/log4j-slf4j-impl/index.html)
+    implementation "org.apache.logging.log4j:log4j-slf4j-impl:2.12.1"
+    implementation "com.lmax:disruptor:3.4.2"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3.3"
+
+    // Graphs
+    implementation "com.google.guava:guava:30.0-jre"
+}

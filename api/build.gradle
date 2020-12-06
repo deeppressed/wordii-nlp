@@ -1,0 +1,33 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+group 'io.wordii.nlp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3.3"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.0.1"
+
+    // Graphs
+    implementation "com.google.guava:guava:30.0-jre"
+
+    // Tests
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.0"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
+}
+
+test {
+    useJUnitPlatform()
+}

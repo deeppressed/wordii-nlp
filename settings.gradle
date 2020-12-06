@@ -1,1 +1,2 @@
 rootProject.name = 'wordii-nlp'
+include 'api', 'client-lib', 'server', 'http-client'
