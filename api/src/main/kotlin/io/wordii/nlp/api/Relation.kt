@@ -3,23 +3,45 @@ package io.wordii.nlp.api
 import kotlinx.serialization.Serializable
 
 /**
- * UD v1 - https://universaldependencies.org/docsv1/u/dep/index.html.
+ * UD v2 - https://universaldependencies.org/u/dep/all.html.
  */
 @Serializable
 enum class Relation(val udName: String) {
-    ACL("acl"), ADVCL("advcl"), ADVMOD("advmod"), AMOD("amod"), APPOS("appos"), AUX("aux"), AUXPASS("auxpass"), CASE("case"), CC(
-        "cc"
-    ),
-    CCOMP("ccomp"), COMPOUND("compound"), CONJ("conj"), COP("cop"), CSUBJ("csubj"), CSUBJPASS("csubjpass"), DEP("dep"), DET(
-        "det"
-    ),
-    DISCOURSE("discourse"), DISLOCATED("dislocated"), DOBJ("dobj"), EXPL("expl"), FOREIGN("foreign"), GOESWITH("goeswith"), IOBJ(
-        "iobj"
-    ),
-    LIST("list"), MARK("mark"), MWE("mwe"), NAME("name"), NEG("neg"), NMOD("nmod"), NSUBJ("nsubj"), NSUBJPASS("nsubjpass"), NUMMOD(
-        "nummod"
-    ),
-    PARATAXIS("parataxis"), PUNCT("punct"), REMNANT("remnant"), REPARANDUM("reparandum"), ROOT("root"), VOCATIVE("vocative"), XCOMP(
-        "xcomp"
-    );
+    NSUBJ("nsubj"),
+    OBJ("obj"),
+    IOBJ("iobj"),
+    CSUBJ("csubj"),
+    CCOMP("ccomp"),
+    XCOMP("xcomp"),
+    OBL("obl"),
+    VOCATIVE("vocative"),
+    EXPL("expl"),
+    DISLOCATED("dislocated"),
+    ADVCL("advcl"),
+    ADVMOD("advmod"),
+    DISCOURSE("discourse"),
+    AUX("aux"),
+    COP("cop"),
+    MARK("mark"),
+    NMOD("nmod"),
+    APPOS("appos"),
+    NUMMOD("nummod"),
+    ACL("acl"),
+    AMOD("amod"),
+    DET("det"),
+    CLF("clf"),
+    CASE("case"),
+    CONJ("conj"),
+    CC("cc"),
+    FIXED("fixed"),
+    FLAT("flat"),
+    COMPOUND("compound"),
+    LIST("list"),
+    PARATAXIS("parataxis"),
+    ORPHAN("orphan"),
+    GOESWITH("goeswith"),
+    REPARANDUM("reparandum"),
+    PUNCT("punct"),
+    ROOT("root"),
+    DEP("dep");
 }

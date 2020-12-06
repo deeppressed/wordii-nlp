@@ -16,8 +16,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
     // NLP
-    implementation "edu.stanford.nlp:stanford-corenlp:3.9.2"
-    implementation "edu.stanford.nlp:stanford-corenlp:3.9.2:models"
+    implementation "edu.stanford.nlp:stanford-corenlp:4.2.0"
+    implementation "edu.stanford.nlp:stanford-corenlp:4.2.0:models"
 
     // Logging
     // The same version as in "Stanford NLP" dependency
